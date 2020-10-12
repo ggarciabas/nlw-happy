@@ -8,7 +8,28 @@
     align-items: center;
 }
 
-#page-lading .content-wrapper {
+#page-landing .content-wrapper {
+    position: relative; /* relative para que os elementos de Estado e Cidade se mantenham relativo a estes*/
+
     width: 100%;
     max-width: 1100px;
+    height: 100%;
+    max-height: 600px;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column; /* um abaixo do outro*/
+    justify-content: space-between; /* mantenha espacos iguais entre eles*/
+}
+
+.content-wrapper .location {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.content-wrapper .enter-app {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }

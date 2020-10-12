@@ -17,8 +17,8 @@ function App() {
           <strong>Curitiba</strong>
           <span>Paraná</span>
         </div>
-        <a href="" className=''>
-          
+        <a href="" className='enter-app'>
+          >=
         </a>
       </div>
     </div>
