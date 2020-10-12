@@ -42,4 +42,4 @@ function App () {
 height: 100vh;
 width: 100vw;
 ```
-- 
+- O componente `Link` do `react-router-dom` permite mudar de página reproveitando o conteúdo que já havia sido carregado.
