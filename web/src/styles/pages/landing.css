@@ -20,6 +20,8 @@
     align-items: flex-start;
     flex-direction: column; /* um abaixo do outro*/
     justify-content: space-between; /* mantenha espacos iguais entre eles*/
+
+    background: url('../../images/landing.svg') no-repeat 80% center;
 }
 
 #page-landing .content-wrapper main {
@@ -42,10 +44,37 @@
     position: absolute;
     right: 0;
     top: 0;
+
+    font-size: 24px;
+    line-height: 34px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+}
+
+.content-wrapper .location strong {
+    font-weight: 800;
 }
 
 .content-wrapper .enter-app {
     position: absolute;
     right: 0;
     bottom: 0;
+
+    width: 80px;
+    height: 80px;
+    background-color: #FFd666;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s; /* para que a troca de cor não seja seca, adiciona delay */
+}
+
+.content-wrapper .enter-app:hover {
+    background-color: #96FEFF;
 }
