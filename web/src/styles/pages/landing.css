@@ -22,6 +22,22 @@
     justify-content: space-between; /* mantenha espacos iguais entre eles*/
 }
 
+#page-landing .content-wrapper main {
+    max-width: 350px; /* para forçar quebra de linha */
+}
+
+#page-landing .content-wrapper main h1 {
+    font-size: 76px;
+    font-weight: 900px;
+    line-height: 70px;
+}
+
+#page-landing .content-wrapper main p {
+    margin-top: 40px; /* para distanciar do titulo*/;
+    font-size: 24px;
+    line-height: 34px;
+}
+
 .content-wrapper .location {
     position: absolute;
     right: 0;
