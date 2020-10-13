@@ -6,7 +6,7 @@ name: GithubPages
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ master, action ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -17,14 +17,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-        - name: Build
-            uses: borales/actions-yarn@v2.0.0
-            with:
-                cmd: build # will run `yarn build` command
-
-        - name: Deploy
-            uses: peaceiris/actions-gh-pages@v3
-            with:
-                github_token: ${{ secrets.PUBLIC_TOKEN }}
-                publish_dir: ./web/build
-                allow_empty_commit: true
+      - uses: actions/checkout@v2
+      - name: Install / Build
+        run: cd web && yarn install && yarn build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.0
+        with:
+            github_token: ${{ secrets.PUBLIC_TOKEN }}
+            publish_dir: ./web/build
+            allow_empty_commit: true
