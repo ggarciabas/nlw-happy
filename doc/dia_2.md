@@ -15,4 +15,7 @@
     - Type ORM: abstração maior. Utiliza uma classe para representar uma tabela do banco de dados. Um objeto é uma linha desta tabela. As alterações no objeto reflete no banco de dados.
 - `yarn typeorm`: cli para migrations.
     - Alterar caminho para compreender typescript: `"typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"`
-- Criar migrations: `yarn typeorm migration:create -n create_orphanages`.
+- Criar migrations: `yarn typeorm migration:create -n create_orphanages`
+    - UP: realizar alterações no banco de dados
+    - DOWN: desfaz alterações no banco de dados
+- Executar migrations: `yarn typeorm migration:run`
