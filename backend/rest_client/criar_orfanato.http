@@ -1,0 +1,13 @@
+### POST
+POST http://localhost:3333/orphanages HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Fundacao Iniciativa",
+    "latitude": "-25.4668482",
+    "longitude": "-49.259743",
+    "about": "Fundação Iniciativa, Curitiba (Curitiba, Brazil). 2.7K likes. A Fundação Iniciativa há 31 anos acolhe crianças que foram vítimas de negligência e, ou, violência.",
+    "instructions": "",
+    "opening_hours": "08:00 às 17:00",
+    "open_on_weekends": "false"
+}
