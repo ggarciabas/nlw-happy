@@ -1,5 +1,0 @@
-### GET
-http://localhost:3333/users
-
-### Query
-http://localhost:3333/users?search=giovanna
