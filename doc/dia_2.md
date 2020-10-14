@@ -19,3 +19,7 @@
     - UP: realizar alterações no banco de dados
     - DOWN: desfaz alterações no banco de dados
 - Executar migrations: `yarn typeorm migration:run`
+- Ativar configuração tsconfig.json: 
+    - `"strictPropertyInitialization": false`
+    - `"experimentalDecorators": true`
+    - `"emitDecoratorMetadata": true,`
