@@ -43,3 +43,10 @@ height: 100vh;
 width: 100vw;
 ```
 - O componente `Link` do `react-router-dom` permite mudar de página reproveitando o conteúdo que já havia sido carregado.
+- Opção para mapa:
+    - OpenStreetMap
+    - MapBox (gratuito, sem cartão): 
+    ```js
+        <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${proccess.env.REACT_APP_XXX}`}/>
+    ```
+    - Google Maps (gratuito, com cartão)
