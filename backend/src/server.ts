@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json()) /* para que o express entenda o JSON default */
 
 app.get('/orphanages', OrphanagesController.index)
+app.get('/orphanages/:id', OrphanagesController.show)
 app.post('/orphanages', OrphanagesController.create)
 
 app.listen(3333);
