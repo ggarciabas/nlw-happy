@@ -1,12 +1,10 @@
 import express from 'express';
 import './database/connection';
-import OrphanagesController from './controllers/OrphanagesController';
+import routes from './routes';
 
 const app = express();
-app.use(express.json()) /* para que o express entenda o JSON default */
 
-app.get('/orphanages', OrphanagesController.index)
-app.get('/orphanages/:id', OrphanagesController.show)
-app.post('/orphanages', OrphanagesController.create)
+app.use(express.json()) /* para que o express entenda o JSON default */
+app.use(routes);
 
 app.listen(3333);
