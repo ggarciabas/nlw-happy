@@ -1,4 +1,4 @@
-### POST
+### CADASTRA ORFANATOS
 POST http://localhost:3333/orphanages HTTP/1.1
 content-type: application/json
 
@@ -11,3 +11,9 @@ content-type: application/json
     "opening_hours": "08:00 às 17:00",
     "open_on_weekends": "false"
 }
+
+### LISTA ORFANATOS
+GET http://localhost:3333/orphanages HTTP/1.1
+
+### DETALHE DO ORFANATO
+GET http://localhost:3333/orphanages/7 HTTP/1.1
