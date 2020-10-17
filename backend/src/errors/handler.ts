@@ -1,5 +1,5 @@
 import {ErrorRequestHandler} from 'express';
-import {ValidationError} from 'Yup';
+import {ValidationError} from 'yup';
 
 interface ValidationErrors {
     [key: string]: string[] // retorna estrutura: key: [erro1, erro2, erro3]
