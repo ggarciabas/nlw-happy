@@ -39,7 +39,7 @@ export default {
         const data = {name, latitude, longitude, about, instructions, opening_hours, open_on_weekends, images} 
 
         const schema = Yup.object().shape({
-            name: Yup.string().required(),
+            name: Yup.string().required('Nome obrigatório'), // por-se alterar a mensagem pelo schema
             latitude: Yup.number().required(),
             longitude: Yup.number().required(),
             about: Yup.string().required().max(300),
