@@ -5,7 +5,6 @@ import mapMarkerImg from '../images/map-pin.svg';
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet';
 
 import '../styles/pages/orphanage-map.css';
-import 'leaflet/dist/leaflet.css'; /*Estilização padrão do leaftlet*/
 import mapIcon from '../utils/mapIcons';
 
 
