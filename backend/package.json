@@ -22,6 +22,7 @@
   },
   "scripts": {
     "dev": "ts-node-dev --transpile-only src/server.ts",
-    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
+    "prod": "ts-node -F src/server.ts"
   }
 }
