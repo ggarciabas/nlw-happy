@@ -1,12 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FiClock, FiInfo } from "react-icons/fi";
 import { Map, Marker, TileLayer } from "react-leaflet";
 import '../styles/pages/orphanage.css';
 import Sidebar from "../components/Sidebar";
 import mapIcon from "../utils/mapIcons";
+import api from "../services/api";
+import { useParams } from 'react-router-dom';
+
+interface Orphanage {
+  latitude: number;
+  longitude: number;
+  name: string;
+  about: string;
+  instructions: string;
+  opening_hours: string;
+  open_on_weekends: boolean;
+}
+
+interface OrphanageParams {
+  id: string;
+}
 
 export default function Orphanage() {
+  const params = useParams<OrphanageParams>();
+  const [orphanage, setOrphanage] = useState<Orphanage>();
+  useEffect(() => {
+      api.get(`orphanages/${params.id}`).then(response => {
+          setOrphanage(response.data)
+      });
+  }, [params.id]); // executa quando o params.id mudar
+
+  if (!orphanage) {
+    return <p>Carregando ... </p>
+  }
+
   return (
     <div id="page-orphanage">
       <Sidebar/>
@@ -52,7 +80,7 @@ export default function Orphanage() {
                 doubleClickZoom={false}
               >
                 <TileLayer 
-                  url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                  url={`https://a.tile.openstreetmap.org/{z}/{x}/{y}.png`}
                 />
                 <Marker interactive={false} icon={mapIcon} position={[-27.2092052,-49.6401092]} />
               </Map>
