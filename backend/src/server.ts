@@ -1,21 +1,16 @@
 import express from 'express';
 import './database/connection';
-import {getRepository} from 'typeorm';
-import Orphanege from './models/Orphanage';
+import routes from './routes';
+import path from 'path';
+import errorHandler from './errors/handler';
+import cors from 'cors';
 
 const app = express();
+
+app.use(cors()) // libera o acesso para diferentes domínios
 app.use(express.json()) /* para que o express entenda o JSON default */
+app.use(routes);
+app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads'))) // para publicar uma pasta de forma estática 
+app.use(errorHandler);
 
-app.post('/orphanages', async (request, response) => {
-    const {name, latitude, longitude, about, instructions, opening_hours, open_on_weekends} = request.body;
-
-    const orphanagesRepository = getRepository(Orphanege);
-
-    const orphanage = orphanagesRepository.create({name, latitude, longitude, about, instructions, opening_hours, open_on_weekends});
-
-    await orphanagesRepository.save(orphanage); // salva no banco
-
-    return response.status(201).json(orphanage); // 201 - algo foi criado
-})
-
-app.listen(3333);
+app.listen(process.env.PORT || 8080)

@@ -1,4 +1,5 @@
-import {Entity, Column, PrimaryGeneratedColumn} from 'typeorm';
+import {Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn} from 'typeorm';
+import Image from './Image';
 
 @Entity('orphanages') /* tabela no banco de dados */
 export default class Orphanage {
@@ -18,4 +19,11 @@ export default class Orphanage {
     opening_hours: string;
     @Column()
     open_on_weekends: boolean;
+    
+    // Relacionamento
+    @OneToMany(() => Image, image => image.orphanage, {
+        cascade: ['insert', 'update']
+    }) // primeiro parâmetro informa o tipo como sendo retorno de uma função // o segundo informa o campo que identifica o relacionamento contrário, que identificará, no caso, o orfanato dentro da imagem. CASCADE: irá automaticamente realiar o cadastro e atualização das imagens.
+    @JoinColumn({name: 'orphanage_id'}) // qual o nome da coluna que identifica o relacionamento de orfanato com imagens
+    images: Image[]
 }
