@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e0d183b89af6b05097f9cb75a3cc1736",
+    "revision": "e9103df187733294c8b4da36ccacc168",
     "url": "/nlw-happy/index.html"
   },
   {
-    "revision": "2257b0ca444ce007d0fe",
+    "revision": "c0796a2da3431b6e8869",
     "url": "/nlw-happy/static/css/2.bcddf60d.chunk.css"
   },
   {
-    "revision": "6af3f80ec20e56402e70",
-    "url": "/nlw-happy/static/css/main.1b0de281.chunk.css"
+    "revision": "3d38149662cbc9e37794",
+    "url": "/nlw-happy/static/css/main.39d739f0.chunk.css"
   },
   {
-    "revision": "2257b0ca444ce007d0fe",
-    "url": "/nlw-happy/static/js/2.d38c7e0a.chunk.js"
+    "revision": "c0796a2da3431b6e8869",
+    "url": "/nlw-happy/static/js/2.efc23a61.chunk.js"
   },
   {
     "revision": "0580f66cff7a7b2e7b5c118fd842bcfd",
-    "url": "/nlw-happy/static/js/2.d38c7e0a.chunk.js.LICENSE.txt"
+    "url": "/nlw-happy/static/js/2.efc23a61.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6af3f80ec20e56402e70",
-    "url": "/nlw-happy/static/js/main.b97fc255.chunk.js"
+    "revision": "3d38149662cbc9e37794",
+    "url": "/nlw-happy/static/js/main.543bae6d.chunk.js"
   },
   {
     "revision": "f5ca312b900a7fc0a953",
