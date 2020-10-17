@@ -47,14 +47,14 @@ function OrphanagesMap () {
                         className='map-popup'
                     >
                         Teste
-                        <Link to=''>
+                        <Link to='/nlw-happy/orphanage/1'>
                             <FiArrowRight size={20} color='#FFF'/>
                         </Link>
                     </Popup>
                 </Marker>
             </Map>
 
-            <Link to='' className='create-orphanage'>
+            <Link to='/nlw-happy/orphanage/create' className='create-orphanage'>
                 <FiPlus size={12} color='#FFF' />
             </Link>
         </div>

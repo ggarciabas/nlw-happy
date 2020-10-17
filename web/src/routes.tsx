@@ -11,8 +11,8 @@ function Routes () {
             <Switch>
                 <Route path='/nlw-happy' exact component={Landing} />
                 <Route path='/nlw-happy/app' component={OrphanagesMap} />
-                <Route path='/nlw-happy/orphanage/create' component={Orphanage} />
-                <Route path='/nlw-happy/orphanage/:id' component={CreateOrphanage} />
+                <Route path='/nlw-happy/orphanage/create' component={CreateOrphanage} />
+                <Route path='/nlw-happy/orphanage/:id' component={Orphanage} />
             </Switch>
         </BrowserRouter>
     );
