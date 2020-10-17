@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Landing from './pages/Landing';
 import OrphanagesMap from './pages/OrphanagesMap'
+import Orphanage from './pages/Orphanage';
+import CreateOrphanage from './pages/CreateOrphanage';
 
 function Routes () {
     return (
@@ -9,6 +11,8 @@ function Routes () {
             <Switch>
                 <Route path='/nlw-happy' exact component={Landing} />
                 <Route path='/nlw-happy/app' component={OrphanagesMap} />
+                <Route path='/nlw-happy/orphanage/create' component={Orphanage} />
+                <Route path='/nlw-happy/orphanage/:id' component={CreateOrphanage} />
             </Switch>
         </BrowserRouter>
     );
