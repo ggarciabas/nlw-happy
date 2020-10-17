@@ -13,4 +13,4 @@ app.use(routes);
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads'))) // para publicar uma pasta de forma estática 
 app.use(errorHandler);
 
-app.listen(3333);
+app.listen(process.env.PORT || 8080)
