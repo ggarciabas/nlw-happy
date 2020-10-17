@@ -1,5 +1,5 @@
 import {Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn} from 'typeorm';
-import Image from './Images';
+import Image from './Image';
 
 @Entity('orphanages') /* tabela no banco de dados */
 export default class Orphanage {
