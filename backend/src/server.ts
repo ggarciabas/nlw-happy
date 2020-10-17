@@ -5,6 +5,7 @@ import OrphanagesController from './controllers/OrphanagesController';
 const app = express();
 app.use(express.json()) /* para que o express entenda o JSON default */
 
+app.get('/orphanages', OrphanagesController.index)
 app.post('/orphanages', OrphanagesController.create)
 
 app.listen(3333);

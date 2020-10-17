@@ -11,3 +11,6 @@ content-type: application/json
     "opening_hours": "08:00 às 17:00",
     "open_on_weekends": "false"
 }
+
+### GET
+GET http://localhost:3333/orphanages HTTP/1.1
