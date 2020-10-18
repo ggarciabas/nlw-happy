@@ -36,7 +36,16 @@ export default {
             return {path: image.filename }
         }) // percorre cada imagem retornando o caminho
 
-        const data = {name, latitude, longitude, about, instructions, opening_hours, open_on_weekends, images} 
+        const data = {
+            name, 
+            latitude, 
+            longitude, 
+            about, 
+            instructions, 
+            opening_hours, 
+            open_on_weekends: open_on_weekends === 'true', // TODO: utilizar Yup cast! 
+            images
+        } 
 
         const schema = Yup.object().shape({
             name: Yup.string().required('Nome obrigatório'), // por-se alterar a mensagem pelo schema
@@ -54,7 +63,8 @@ export default {
         });
 
         await schema.validate(data, {
-            abortEarly: false // para retornar todos os erros e não somente o primeiro
+            abortEarly: false, // para retornar todos os erros e não somente o primeiro
+            
         });
 
         const orphanage = orphanagesRepository.create(data);
