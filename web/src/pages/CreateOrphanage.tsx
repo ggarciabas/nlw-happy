@@ -5,8 +5,12 @@ import { FiPlus } from "react-icons/fi";
 import Sidebar from "../components/Sidebar";
 import '../styles/pages/create-orphanage.css';
 import mapIcon from "../utils/mapIcons";
+import api from "../services/api";
+import { useHistory } from "react-router-dom";
 
 export default function CreateOrphanage() {
+  const history = useHistory()
+
   const [position, setPosition] = useState({latitude: 0, longitude: 0});
   // Tradicional para lidar com Formulário REACt
   const [name, setName] = useState('');
@@ -26,18 +30,27 @@ export default function CreateOrphanage() {
     });
   }
 
-  function handleSubmit (event: FormEvent) {
+  async function handleSubmit (event: FormEvent) {
     event.preventDefault();
     const {latitude, longitude} = position;
-    console.log({
-      name,
-      latitude,
-      longitude,
-      about,
-      instructions,
-      opening_hours,
-      open_on_weekends
-    })
+
+    const data = new FormData(); // semelhante ao Multipart Form do Insominia
+    data.append('name', name); 
+    data.append('latitude', String(latitude)); 
+    data.append('longitude', String(longitude)); 
+    data.append('about', about); 
+    data.append('instructions', instructions); 
+    data.append('opening_hours', opening_hours); 
+    data.append('open_on_weekends', String(open_on_weekends)); 
+    images.forEach(image => {
+      data.append('images', image);
+    }); 
+
+    await api.post('orphanages', data);
+
+    alert('Cadastro realizado com sucesso!');
+
+    history.push('/nlw-happy/app');
   }
 
   function handleSelectImages (event: ChangeEvent<HTMLInputElement>) {
