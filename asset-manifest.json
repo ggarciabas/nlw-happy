@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/nlw-happy/static/css/main.39d739f0.chunk.css",
-    "main.js": "/nlw-happy/static/js/main.543bae6d.chunk.js",
-    "main.js.map": "/nlw-happy/static/js/main.543bae6d.chunk.js.map",
+    "main.css": "/nlw-happy/static/css/main.2edf10ea.chunk.css",
+    "main.js": "/nlw-happy/static/js/main.16b6af39.chunk.js",
+    "main.js.map": "/nlw-happy/static/js/main.16b6af39.chunk.js.map",
     "runtime-main.js": "/nlw-happy/static/js/runtime-main.fd5cfd42.js",
     "runtime-main.js.map": "/nlw-happy/static/js/runtime-main.fd5cfd42.js.map",
     "static/css/2.bcddf60d.chunk.css": "/nlw-happy/static/css/2.bcddf60d.chunk.css",
-    "static/js/2.efc23a61.chunk.js": "/nlw-happy/static/js/2.efc23a61.chunk.js",
-    "static/js/2.efc23a61.chunk.js.map": "/nlw-happy/static/js/2.efc23a61.chunk.js.map",
+    "static/js/2.b355af87.chunk.js": "/nlw-happy/static/js/2.b355af87.chunk.js",
+    "static/js/2.b355af87.chunk.js.map": "/nlw-happy/static/js/2.b355af87.chunk.js.map",
     "index.html": "/nlw-happy/index.html",
-    "precache-manifest.08f4dd0b9fa9d83229955f83df0de839.js": "/nlw-happy/precache-manifest.08f4dd0b9fa9d83229955f83df0de839.js",
+    "precache-manifest.74a5517a6d76815496e8fcfd03bab49f.js": "/nlw-happy/precache-manifest.74a5517a6d76815496e8fcfd03bab49f.js",
     "service-worker.js": "/nlw-happy/service-worker.js",
     "static/css/2.bcddf60d.chunk.css.map": "/nlw-happy/static/css/2.bcddf60d.chunk.css.map",
-    "static/css/main.39d739f0.chunk.css.map": "/nlw-happy/static/css/main.39d739f0.chunk.css.map",
-    "static/js/2.efc23a61.chunk.js.LICENSE.txt": "/nlw-happy/static/js/2.efc23a61.chunk.js.LICENSE.txt",
+    "static/css/main.2edf10ea.chunk.css.map": "/nlw-happy/static/css/main.2edf10ea.chunk.css.map",
+    "static/js/2.b355af87.chunk.js.LICENSE.txt": "/nlw-happy/static/js/2.b355af87.chunk.js.LICENSE.txt",
     "static/media/landing.css": "/nlw-happy/static/media/landing.91c8d1af.svg",
     "static/media/logo-text.svg": "/nlw-happy/static/media/logo-text.1653c647.svg",
     "static/media/map-pin.svg": "/nlw-happy/static/media/map-pin.284d1ea8.svg"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.fd5cfd42.js",
     "static/css/2.bcddf60d.chunk.css",
-    "static/js/2.efc23a61.chunk.js",
-    "static/css/main.39d739f0.chunk.css",
-    "static/js/main.543bae6d.chunk.js"
+    "static/js/2.b355af87.chunk.js",
+    "static/css/main.2edf10ea.chunk.css",
+    "static/js/main.16b6af39.chunk.js"
   ]
 }
