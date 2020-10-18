@@ -17,3 +17,13 @@ const [orphanages, setOrphanages] = useState([]);
     - `map` percorre algo e retorna algo
 - Segurança para uso do `a` html:
     - `rel='noopener noreferrer'`
+- `htmlFor`, permite uma tag agir como outra:
+```html
+<div className="images-container">
+    <label className="new-image" htmlFor='image[]'>
+    <FiPlus size={24} color="#15b6d6" />
+</label>
+</div>
+<input type='file' id='image[]'/>
+```
+- Recurso global de todo navegador para gerar uma URL de um objeto: `URL.createObjectURL(Blob)`.
